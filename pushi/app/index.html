@@ -1,0 +1,175 @@
+<!doctype html>
+<html><head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+      <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+      <script type="text/javascript" src="js/cal.js"></script>
+       <link rel = "stylesheet" type="text/css" href="css/cal.css">
+    <!-- Loading Flat UI -->
+
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel = "stylesheet" type="text/css" href="style.css">
+    
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    
+<script type="text/javascript" src="frontjs/loginCheck.js"></script>
+    <script type="text/javascript" src="frontjs/registerCheck.js"></script>
+        <script src="Scripted.js"></script>
+            <title>Pushitu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body onLoad="setToday()">
+        <div class="container">
+           <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <nav class="navbar navbar-embossed" role="navigation">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
+                        <div class="navbar-header"><a class="navbar-brand" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Pushitu!<span class="badge pull-right">5</span></a></div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav  navbar-right navbar-nav">
+                        <li><a href="#" id="navUser">Welcome, Skobellof</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"><img src="img/my.jpg" alt="Pic" class="img-square"><strong class="caret"></strong></a>
+                            <ul class="dropdown-menu" id="navDrop">
+                                 <li ><a href="#" >Edit Profile</a></li>
+                                <li><a href="#">Log Out</a></li>
+                            </ul>
+                        </li>       
+                        </ul>
+                    </div>
+                         <div id="collapseOne" class=" collapse">
+                        <ul id="navTabs" class="nav nav-pills navbar-nav">
+                        <li class="active"><a href="#invites" data-toggle="tab"><i class="glyphicon glyphicon-envelope"></i> Invites<span class="badge pull-right">3</span></a></li>
+                        <li><a href="#notif" data-toggle="tab"><i class="glyphicon glyphicon-bell"></i> Notifications<span class="badge pull-right">2</span></a></li>
+                    </ul>
+
+                    <div class="tab-content collapseContent">
+                           <div class="tab-pane fade in active" id="invites">
+                        <!-- Dapat Magload sa database -->
+                         <legend class="legend"><h1 >Invitations</h1></legend>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Event Name</th>
+                                <th>Organizer</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Place</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                 <tr>
+                                     <td><a href="#">WEBAPPS Workshop</a></td>
+                                     <td>Sir Briane Samson</td>
+                                     <td>January 20, 2014</td>
+                                     <td>4:20pm - 6:00pm</td>
+                                      <td>A903</td>
+                                     <td><a href="#" data-toggle="tooltip" title="Accept"><i class="glyphicon glyphicon-ok"></i> </a><a href="#" data-toggle="tooltip" title="Decline"><i class="glyphicon glyphicon-remove"></i></a></td>
+                                 </tr>
+                                  <tr>
+                                     <td><a href="#">IGNITION</a></td>
+                                     <td>Sir Briane Samson</td>
+                                     <td>February 1, 2014</td>
+                                     <td>1:00pm - 6:00pm</td>
+                                     <td>A2003</td>
+                                      <td><a href="#" data-toggle="tooltip" title="Accept"><i class="glyphicon glyphicon-ok"></i> </a><a href="#" data-toggle="tooltip" title="Decline"><i class="glyphicon glyphicon-remove"></i></a></td>
+                                 </tr>
+                                  <tr>
+                                     <td><a href="#">OS Benchmarking</a></td>
+                                     <td>La Salle Computer Society</td>
+                                     <td>February 21, 2014</td>
+                                     <td>3:30pm - 5:30pm</td>
+                                     <td>G304B</td>
+                                     <td><a href="#" data-toggle="tooltip" title="Accept"><i class="glyphicon glyphicon-ok"></i> </a><a href="#" data-toggle="tooltip" title="Decline"><i class="glyphicon glyphicon-remove"></i></a></td>
+                                 </tr>
+                            </tbody>
+                        </table>
+                    
+                    
+                    </div>
+                    <div class="tab-pane fade in " id="notif">
+                        <legend class="legend"><h1 >Notifications</h1></legend>
+                        <ul class="list-group">
+                             <li class="list-group-item">Raiza is Attending <a href="#">WEBAPPS Workshop</a></li>
+                             <li class="list-group-item"><a href="#">OS Benchmarking</a> Information has been updated</li>
+
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                    </nav>
+                </div>
+           </div>
+             <div class="jumbotron yellowBlock">
+                         <legend><h1 >Home</h1></legend>
+                         <div id="cal">
+            <table class="table">
+                <thead>
+                    <div class="btn-group btn-group-justified">
+                        <tr> 
+                            <th class="btn redButton " role="button">Sunday</th>
+                            <th class="btn redButton " role="button">Monday</th>
+                            <th class="btn redButton" role="button">Teusday</th>
+                            <th class="btn redButton" role="button">Wednesday</th>
+                            <th class="btn redButton" role="button">Thursday</th>
+                            <th class="btn redButton" role="button">Friday</th>
+                            <th class="btn redButton" role="button">Saturday</th>
+                        </tr>
+                    </div>
+                </thead>
+                <tbody id="dates">
+                </tbody>
+            </table>
+        </div>
+
+
+<big>Select-A-Month</big>
+<FORM NAME="calControl" onSubmit="return false;">
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR><TD COLSPAN=7>
+<SELECT NAME="month" onChange="selectDate()">
+<OPTION>January</OPTION>
+<OPTION>February</OPTION>
+<OPTION>March</OPTION>
+<OPTION>April</OPTION>
+<OPTION>May</OPTION>
+<OPTION>June</OPTION>
+<OPTION>July</OPTION>
+
+<OPTION>August</OPTION>
+<OPTION>September</OPTION>
+<OPTION>October</OPTION>
+<OPTION>November</OPTION>
+<OPTION>December</OPTION>
+</SELECT>
+<INPUT NAME="year" TYPE=TEXT SIZE=4 MAXLENGTH=4>
+<INPUT TYPE="button" NAME="Go" value="Build!" onClick="selectDate()">
+</TD>
+</TR>
+</FORM>
+<FORM NAME="calButtons">
+<TR><TD><textarea FONT="Courier" NAME="calPage" WRAP=no ROWS=8 COLS=22></textarea></TD><TR><TD>
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE=" <<  "  onClick="setPreviousYear()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="  <  "  onClick="setPreviousMonth()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="Today"  onClick="setToday()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="  >  "  onClick="setNextMonth()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="  >> "  onClick="setNextYear()">
+</TD></TR>
+</TABLE></FORM></FONT>
+            </div>
+        </div>
+        
+    
+</body></html>
