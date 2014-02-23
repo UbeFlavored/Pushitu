@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+        <link rel = "stylesheet" type="text/css" href="css/cal.css">
+        <script type="text/javascript" src="js/cal.js"></script>
+        <link href="css/flat-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel = "stylesheet" type="text/css" href="style.css">
+    
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Pushitu</title>
+    </head>
+    <body onLoad="setToday()">
+     	<div id="cal">
+     		<table class="table">
+     			<thead>
+     				<div class="btn-group btn-group-justified">
+     					<tr> 
+     						<th class="btn btn-default" role="button">Sunday</th>
+     						<th class="btn btn-default" role="button">Monday</th>
+     						<th class="btn btn-default" role="button">Teusday</th>
+     						<th class="btn btn-default" role="button">Wednesday</th>
+     						<th class="btn btn-default" role="button">Thursday</th>
+     						<th class="btn btn-default" role="button">Friday</th>
+     						<th class="btn btn-default" role="button">Saturday</th>
+     					</tr>
+     				</div>
+     			</thead>
+     			<tbody id="dates">
+     			</tbody>
+     		</table>
+		</div>
+
+<big>Select-A-Month</big>
+<FORM NAME="calControl" onSubmit="return false;">
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR><TD COLSPAN=7>
+<SELECT NAME="month" onChange="selectDate()">
+<OPTION>January</OPTION>
+<OPTION>February</OPTION>
+<OPTION>March</OPTION>
+<OPTION>April</OPTION>
+<OPTION>May</OPTION>
+<OPTION>June</OPTION>
+<OPTION>July</OPTION>
+
+<OPTION>August</OPTION>
+<OPTION>September</OPTION>
+<OPTION>October</OPTION>
+<OPTION>November</OPTION>
+<OPTION>December</OPTION>
+</SELECT>
+<INPUT NAME="year" TYPE=TEXT SIZE=4 MAXLENGTH=4>
+<INPUT TYPE="button" NAME="Go" value="Build!" onClick="selectDate()">
+</TD>
+</TR>
+</FORM>
+<FORM NAME="calButtons">
+<TR><TD><textarea FONT="Courier" NAME="calPage" WRAP=no ROWS=8 COLS=22></textarea></TD><TR><TD>
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE=" <<  "  onClick="setPreviousYear()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="  <  "  onClick="setPreviousMonth()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="Today"  onClick="setToday()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="  >  "  onClick="setNextMonth()">
+<INPUT TYPE=BUTTON NAME="previousYear" VALUE="  >> "  onClick="setNextYear()">
+</TD></TR>
+</TABLE></FORM></FONT>
+    </body>
+</html>
+
+
