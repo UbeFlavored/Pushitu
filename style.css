@@ -1,7 +1,17 @@
 .navbar {
+
+	
+	background-color: #00a0b0;	
+}
+#frontNav{
 	margin-top: 20px;
-	margin-bottom: 30px;
-	background-color: #00a0b0;
+	margin-bottom: 20px;
+}
+#fixedNav{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	position: fixed;
+	min-width: 84.5%;
 }
 
 .navbar-brand{
@@ -68,7 +78,12 @@
 
 
 /*Container Color Schemes... Very Reusable :D*/
-
+.whiteBlock {
+	background-color: white;
+	color: #cc333f;
+	font-family: Segoe UI Semibold;
+	
+}
 .redBlock {
 	background-color: #cc333f;
 	color: white;
@@ -117,51 +132,83 @@
 	background-color: #f8d560;
 	color: #cc333f;
 }
+
+.page {
+	color: #cc333f;
+	font-family: Segoe UI Bold;
+	font-size: 27px;	
+	margin-left: 20px;
+}
+
+.pageMinor {
+	color: #00a0b0;
+	font-family: Segoe UI Bold;
+	font-size: 24px;	
+	margin-left: 20px;
+}
 #navDrop{
+	min-width: 250px;
 	background-color: #00a0b0;
 }
 #navDrop li a{
 	color: white;
+	font-family: Segoe UI Semibold;
+	font-size: 18px;
+	padding: 15px;
 }
 #navDrop li a:hover{
-	background-color: #cc333f ;
+	background-color: #12adbd;
 }
 #navTabs a{
 	color: white;
 	font-family: Segoe UI Semibold;
 }
 #navTabs a:hover{
-	color: #edc951;
-	background-color: #cc333f;
+	background-color: #12adbd;
 }
 #navTabs a:active{
 	color: #edc951;
-	background-color: #cc333f;
+	background-color: #edc951;
+}
+
+.collapseContent{
+	background-color: #00a0b0;
+	color:white;
+	max-height: 250px;
+	overflow-y:scroll; 
+	overflow-x:0;
+	min-width: 1140px;
+	padding-left:50px;
+	padding-right: 50px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 #collapseOne{
-	color:white;
-	margin-left: 50px;
-	max-height: 250px;
+	position: fixed;
+	background-color: #00a0b0;
 	font-family: Segoe UI;
-	overflow-y:scroll; 
+	margin-right: 105px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 .table-hover tbody tr:hover{
 	
 	color: black;
 }
 .list-group-item{
-	background-color:#edc951; 
-	border-color: #edc951;
+	background-color:#00a0b0;
+	border-color: #00a0b0;
 
 }
 #collapseOne a{
-	color:  #cc333f;
-	font-family: Segoe UI;
-	font-weight: bolder;
+	color:  #edc951;
+	font-family: Segoe UI Bold;
 
 }
 #navUser{
-	color:white;
+	font-size: 18px;
+	font-family: Segoe UI Bold;
+	color: #edc951;
 }
 #welcomePanel{
 	height:180px;
@@ -177,4 +224,43 @@
 	background-color: #00a0b0;
 	color: white;
 	font-family: Segoe UI;
+}
+.modal-body{
+	height: 400px;
+	overflow-y:scroll; 
+}
+
+
+.coloredScroll::-webkit-scrollbar {
+    width: 12px;
+}
+.coloredScroll2::-webkit-scrollbar {
+    width: 12px;
+}
+
+ .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #12adbd;
+}
+/* Track */
+.coloredScroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+
+}
+ 
+/* Handle */
+.coloredScroll::-webkit-scrollbar-thumb {
+    background-color: #edc951;
+}
+.coloredScroll2::-webkit-scrollbar-thumb {
+    background-color: #00a0b0;
+}
+#fixedBody{
+	margin-top: 100px;
+}
+.tooltip.top .tooltip-arrow {
+	border-top-color: #cc333f;
+}
+
+.tooltip-inner {
+	background-color: #cc333f;
 }

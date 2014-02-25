@@ -34,13 +34,13 @@
         <div class="container">
            <div class="row clearfix">
                 <div class="col-md-12 column">
-                    <nav class="navbar navbar-embossed" role="navigation">
+                    <nav class="navbar navbar-embossed" role="navigation" id="fixedNav">
                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
                         <div class="navbar-header"><a class="navbar-brand" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Pushitu!<span class="badge pull-right">5</span></a></div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav  navbar-right navbar-nav">
                         <li><a href="#" id="navUser">Welcome, Skobellof</a></li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"><img src="img/my.jpg" alt="Pic" class="img-square"><strong class="caret"></strong></a>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"><strong class="caret"></strong></a>
                             <ul class="dropdown-menu" id="navDrop">
                                  <li ><a href="#" >Edit Profile</a></li>
                                 <li><a href="#">Log Out</a></li>
@@ -48,16 +48,15 @@
                         </li>       
                         </ul>
                     </div>
-                         <div id="collapseOne" class=" collapse">
+                         <div id="collapseOne" class=" collapse ">
                         <ul id="navTabs" class="nav nav-pills navbar-nav">
                         <li class="active"><a href="#invites" data-toggle="tab"><i class="glyphicon glyphicon-envelope"></i> Invites<span class="badge pull-right">3</span></a></li>
                         <li><a href="#notif" data-toggle="tab"><i class="glyphicon glyphicon-bell"></i> Notifications<span class="badge pull-right">2</span></a></li>
                     </ul>
 
-                    <div class="tab-content collapseContent">
+                    <div class="tab-content collapseContent coloredScroll pull-left">
                            <div class="tab-pane fade in active" id="invites">
                         <!-- Dapat Magload sa database -->
-                         <legend class="legend"><h1 >Invitations</h1></legend>
                         <table class="table table-hover">
                             <thead>
                             <tr>
@@ -71,7 +70,7 @@
                             </thead>
                             <tbody>
                                  <tr>
-                                     <td><a href="#">WEBAPPS Workshop</a></td>
+                                     <td><a href="#" data-toggle="modal" data-target="#modal1">WEBAPPS Workshop</a></td>
                                      <td>Sir Briane Samson</td>
                                      <td>January 20, 2014</td>
                                      <td>4:20pm - 6:00pm</td>
@@ -79,7 +78,7 @@
                                      <td><a href="#" data-toggle="tooltip" title="Accept"><i class="glyphicon glyphicon-ok"></i> </a><a href="#" data-toggle="tooltip" title="Decline"><i class="glyphicon glyphicon-remove"></i></a></td>
                                  </tr>
                                   <tr>
-                                     <td><a href="#">IGNITION</a></td>
+                                     <td><a href="#" data-toggle="modal" data-target="#modal2">IGNITION</a></td>
                                      <td>Sir Briane Samson</td>
                                      <td>February 1, 2014</td>
                                      <td>1:00pm - 6:00pm</td>
@@ -87,7 +86,7 @@
                                       <td><a href="#" data-toggle="tooltip" title="Accept"><i class="glyphicon glyphicon-ok"></i> </a><a href="#" data-toggle="tooltip" title="Decline"><i class="glyphicon glyphicon-remove"></i></a></td>
                                  </tr>
                                   <tr>
-                                     <td><a href="#">OS Benchmarking</a></td>
+                                     <td><a href="#" data-toggle="modal" data-target="#modal3">OS Benchmarking</a></td>
                                      <td>La Salle Computer Society</td>
                                      <td>February 21, 2014</td>
                                      <td>3:30pm - 5:30pm</td>
@@ -100,10 +99,9 @@
                     
                     </div>
                     <div class="tab-pane fade in " id="notif">
-                        <legend class="legend"><h1 >Notifications</h1></legend>
                         <ul class="list-group">
-                             <li class="list-group-item">Raiza is Attending <a href="#">WEBAPPS Workshop</a></li>
-                             <li class="list-group-item"><a href="#">OS Benchmarking</a> Information has been updated</li>
+                             <li class="list-group-item">Raiza is Attending <a href="#" data-toggle="modal" data-target="#modal1">WEBAPPS Workshop</a></li>
+                             <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modal3">OS Benchmarking</a> Information has been updated</li>
 
                         </ul>
                     </div>
@@ -112,8 +110,105 @@
                     </nav>
                 </div>
            </div>
-             <div class="jumbotron yellowBlock">
-                         <legend><h1 >Home</h1></legend>
+           <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header blueBlock">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">WEBAPPS Workshop</h4>
+                        </div>
+                        <div class="modal-body whiteBlock coloredScroll2">
+                            <p>Private Event: Invite Only <br>
+							Event Name: WEBAPPS Workshop <br>
+							Event Type: Talk/Seminar <br>
+							Category: Computers, Programming, Design <br>
+							Organizer: Briane Samson <br>
+							Time: 4:20 - 6:00 <br>
+							Date: January 20, 2014 <br>
+							Venue: A903 <br>
+							Speakers: <br>
+                                Jan Lim - Co-Founder of Whippin <br>
+                                Arneil Leonin - Web Master         
+                            <p>Details:<br>
+                               This event will teach you about Web Applications and how to make it.<br>
+                               Its so awesome it will make you pass my subject... so join me and together we can rule the world. 
+                            </p>
+                        </div>
+                        <div class="modal-footer whiteBlock">
+                            <button type="button" class="btn btn-default redButton" data-dismiss="modal">Decline</button>
+                            <button type="button" class="btn btn-primary blueButton">Accept</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header blueBlock">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">IGNITION</h4>
+                        </div>
+                        <div class="modal-body whiteBlock coloredScroll2">
+                            <p>Private Event: Invite Only <br>
+							Event Name: IGNITION <br>
+							Event Type: Hackathon <br>
+							Category: Computers, Programming <br>
+							Organizer: Briane Samson <br>
+							Time: 1:00 - 6:00 <br>
+							Date: February 1, 2014 <br>
+							Venue: A2003</p>
+                            <p>Details:<br>
+                               Get Ready for a 5 hour programming marathon(or hackathon)!<br>
+                               Where you program your WEBAPPS project for 5 hours.<br>
+
+                               <i>Get Ready for a surprise after the event ;)</i>
+                            </p>
+                        </div>
+                        <div class="modal-footer whiteBlock">
+                           <button type="button" class="btn btn-default redButton" data-dismiss="modal">Decline</button>
+                            <button type="button" class="btn btn-primary blueButton">Accept</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header blueBlock">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">WEBAPPS Workshop</h4>
+                        </div>
+                        <div class="modal-body whiteBlock coloredScroll2">
+                            <p>Public Event; Open To All <br>
+							Event Name: OS Benchmarking <br>
+							Event Type: Talk/Seminar <br>
+							Category: Computers, Programming, Benchmarking <br>
+							Organizer: La Salle Computer Society <br>
+							Time: 3:30 - 5:30 <br>
+							Date: February 21, 2014 <br>
+							Venue: G304B <br>
+							Speakers: <br>
+                                Mark Castilo - OS Guru <br>
+                                Kyle Dela Cruz - OS Benchmarking Veteran         
+                            </p>
+                            <p>Details:<br>
+                               How do you Benchmark an OS you ask?<br>
+                               Learn OS benchmarking with you own Favorite OS Guru <b> Mark Castilo</b><br>
+                               And Learn from the experiences of Kyle Dela Cruz, who has been benchmarking, since he was a child<br>
+                               <i>Required for doc Bulos' OPERSYS class</i>
+                            </p>
+                        </div>
+                        <div class="modal-footer whiteBlock">
+                            <button type="button" class="btn btn-default redButton" data-dismiss="modal">Decline</button>
+                            <button type="button" class="btn btn-primary blueButton">Accept</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
+             <div class="jumbotron redBlock" id="fixedBody">
+                         <legend><h1 id="month">Month</h1></legend>
                          <div id="cal">
             <table class="table">
                 <thead>
@@ -135,7 +230,11 @@
         </div>
 
 
-<big>Select-A-Month</big>
+
+            </div>
+
+            <big class = "pageMinor ">Select-A-Month</big>
+            <div class = "blueBlock">
 <FORM NAME="calControl" onSubmit="return false;">
 <TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
 <TR><TD COLSPAN=7>
@@ -168,7 +267,7 @@
 <INPUT TYPE=BUTTON NAME="previousYear" VALUE="  >> "  onClick="setNextYear()">
 </TD></TR>
 </TABLE></FORM></FONT>
-            </div>
+</div>
         </div>
         
     

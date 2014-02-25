@@ -5,20 +5,33 @@ function VerifyLogin(){
     var pass = document.getElementById("loginPass").value;
     console.log("email: "+email);
     console.log("password: "+pass);
+	
+	for (i = 0; i < document.styleSheets.length; i++) {
+		if (document.styleSheets[i].title == "style")
+			mainCSS = document.styleSheets[i];
+		break;
+	}
+	
     if(email ==""){
-    	console.log("Email Missing");
     	isEmpty = true;
+		document.getElementById("e").className = "form-group has-error";
     }
+	else {
+		document.getElementById("e").className = "form-group";
+		isEmpty = false;
+	}
     if(pass == ""){
-    	console.log("Password is Missing");
     	isEmpty = true;
+		document.getElementById("p").className = "form-group has-error";
     }
+	else {
+		document.getElementById("p").className = "form-group";
+		isEmpty = false;
+	}
     if(isEmpty == true){
-    	alert("X")
     	return false;
     }
     else{
-    	alert("D")
     	return true;
     }
     

@@ -31,19 +31,19 @@
 	
 		<div class="row clearfix">
 			<div class="col-md-12 column">
-				<nav class="navbar navbar-embossed" role="navigation">
+				<nav class="navbar navbar-embossed" id="frontNav" role="navigation">
 					<div class="navbar-header" >
 						 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Pushitu!</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" id = "sign" href="#">Sign In<strong class="caret"></strong></a>
-								<div class="dropdown-menu drop" id="drop">
+								<div class="dropdown-menu" id="drop">
 									<form class="form-horizontal" role="form"  onsubmit="return VerifyLogin();" action="index.html">
-										<div class="form-group">
+										<div class="form-group" id = "e">
 											<input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
 										</div>
-										<div class="form-group">
+										<div class="form-group" id = "p">
 											<input type="password" class="form-control" id="loginPass" placeholder="Password">
 										</div>	
 										
@@ -60,38 +60,109 @@
 		<div class="row clearfix">
 		
 			<div class="col-md-8 column">
-				<div class="jumbotron yellowBlock">
-					<h1>
-						Place Holder!
-					</h1>
-					<p>
-						I don't know what to write here but I want to write something here.
-						The longer I am able to write, the better because I will be able to see it
-						clearly. Hue hue hue.<br>
-						K, bye!
-					</p>
-					<p>
-						<a class="btn btn-large blueButton" href="#">Pushitu, Coming soon!</a>
-					</p>
-				</div>
+				<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+					<ol class="carousel-indicators">
+    					<li data-target="#this-carousel-id" data-slide-to="0" class="active"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="1"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="2"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="3"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="4"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="5"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="6"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="7"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="8"></li>
+    					<li data-target="#this-carousel-id" data-slide-to="9"></li>
+
+  					</ol>
+					<div class="carousel-inner">
+						<div class="item active"><!-- class of active since it's the first item -->
+							<img src="slides/start.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/1.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/2.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/3.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/4.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/5.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/6.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/7.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/8.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="slides/9.jpg" alt="" />
+							<div class="carousel-caption">
+								<p></p>
+							</div>
+						</div>
+				  </div><!-- /.carousel-inner -->
+				  <!--  Next and Previous controls below
+						href values must reference the id for this carousel -->
+					<a class="left carousel-control" href="#this-carousel-id" data-slide="prev">
+   		 				<span class="glyphicon glyphicon-chevron-left"></span>
+  					</a>
+  					<a class="right carousel-control" href="#this-carousel-id" data-slide="next">
+   						<span class="glyphicon glyphicon-chevron-right"></span>
+  					</a>
+				</div><!-- /.carousel -->
 			</div>
 			
 			<div class="col-md-4 column">
 				<legend class="legend">Start using Pushitu now!</legend>
 				<form role="form" id="RegisterForm"  onsubmit="return verifyReg()">
-					<div class="form-group">
+					<div class="form-group" id = "first">
 						 <input type="text" class="form-control" id="fname" placeholder="First Name">
 					</div>
-					<div class="form-group">
+					<div class="form-group" id = "last">
 						 <input type="text" class="form-control" id="lname"placeholder="Last Name">
 					</div>
-					<div class="form-group">
+					<div class="form-group" id = "add">
 						 <input type="email" class="form-control" id="emailad"placeholder="E-Mail">
 					</div>
-					<div class="form-group">
+					<div class="form-group" id = "pas1">
 						<input type="password" class="form-control" id="pass1"placeholder="Password">
 					</div>
-					<div class="form-group">
+					<div class="form-group" id = "pas2">
 						<input type="password" class="form-control" id="pass2"placeholder="Confirm Password">
 					</div>
 					<button type="submit" class="btn btn-hg btn-embossed btn-block redButton pull-right" >Submit</button>
