@@ -1,0 +1,30 @@
+#cal{
+	width: 1000px;
+}
+
+.boxes{
+	height:50px;
+	text-align: right;
+	color: lightgray;
+	border-color: gray;
+	border-radius: 50px;
+}
+
+.table > thead > tr > th{
+	padding: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 14.28%;
+}
+
+td{
+	height: 130px;
+}
+
+.btn{
+	padding-top: 100px;
+	display: table-cell;
+}
+
+
+
