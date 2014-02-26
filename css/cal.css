@@ -1,5 +1,6 @@
 #cal{
-	width: 1000px;
+	width: 95%;
+
 }
 
 .boxes{
@@ -8,6 +9,7 @@
 	color: lightgray;
 	border-color: gray;
 	border-radius: 50px;
+	
 }
 
 .table > thead > tr > th{
@@ -15,6 +17,7 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 14.28%;
+
 }
 
 td{
@@ -26,5 +29,8 @@ td{
 	display: table-cell;
 }
 
+#central{
+	margin-left: 350px;
+}
 
 

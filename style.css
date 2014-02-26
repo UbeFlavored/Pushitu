@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .navbar {
 
 	
@@ -12,9 +11,19 @@
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
 	position: fixed;
-	min-width: 84.5%;
+	min-width: 84.6%;
+	z-index: 1030;
 }
-
+@media (max-width: 1200px){
+	#fixedNav{
+		width: 90%;
+	}
+}
+@media(min-width: 1400px){
+	#fixedNav{
+		width: 1135px;
+	}
+}
 .navbar-brand{
 	color: white;
 	font-family: Segoe UI Bold;
@@ -85,6 +94,7 @@
 	font-family: Segoe UI Semibold;
 	
 }
+
 .redBlock {
 	background-color: #cc333f;
 	color: white;
@@ -135,10 +145,12 @@
 }
 
 .page {
-	color: #cc333f;
-	font-family: Segoe UI Bold;
-	font-size: 27px;	
-	margin-left: 20px;
+	  color: #cc333f;
+    font-family: Segoe UI Semibold;
+    font-size: 20px;	
+    margin-left: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
 
 .pageMinor {
@@ -172,6 +184,27 @@
 	background-color: #edc951;
 }
 
+.whiteBlock .nav-tabs{
+	background-color: white;
+	color: #cc333f;
+	font-family: Segoe UI Semibold;
+
+}
+.whiteBlock .nav-tabs a{
+	background-color: white;
+	color: #cc333f;
+	font-family: Segoe UI Semibold;
+
+}
+.whiteBlock .nav-tabs a:hover{
+	background-color: #cc333f;
+	color: white;
+}
+#navTabs a:active{
+	background-color: #cc333f;
+	color: white;
+}
+
 .collapseContent{
 	background-color: #00a0b0;
 	color:white;
@@ -199,7 +232,13 @@
 .list-group-item{
 	background-color:#00a0b0;
 	border-color: #00a0b0;
+	color:white;
 
+}
+#whiteListItem{
+	background-color: white;
+	color: #cc333f;
+	font-family: Segoe UI Semibold;
 }
 #collapseOne a{
 	color:  #edc951;
@@ -255,194 +294,18 @@
 .coloredScroll2::-webkit-scrollbar-thumb {
     background-color: #00a0b0;
 }
-#fixedBody{
-	margin-top: 100px;
-}
+
 .tooltip.top .tooltip-arrow {
 	border-top-color: #cc333f;
 }
 
 .tooltip-inner {
 	background-color: #cc333f;
-=======
-.navbar {
-	margin-top: 20px;
-	margin-bottom: 30px;
-	background-color: #00a0b0;
 }
-
-.navbar-brand{
-	color: white;
-	font-family: Segoe UI Bold;
-	font-size: 24px;
+#addButton{
+	color:#cc333f;
+	margin-left: 10px;
 }
-
-.navbar-brand:hover{
-	color: #edc951;
-}
-
-.navbar .nav li.dropdown > .dropdown-toggle .caret {
-    border-bottom-color: #edc951;
-    border-top-color: #edc951;
-}
-
-.navbar-toggle:hover:before, .navbar-toggle:focus:before{
-	color: white;
-}
-
-.navbar-toggle:before {
-	color: #edc951;
-}
-
-#sign {
-	font-size: 20px;
-	font-family: Segoe UI Bold;
-	color: #edc951;
-}
-
-#sign:hover {
-	background-color: #12adbd;
-}
-
-#drop {
-	padding: 30px;
-	min-width: 300px;
-	background-color: #00a0b0;
-}
-
-.legend {
-	color: #cc333f;
-	font-family: Segoe UI Bold;
-	font-size: 25px;
-	margin-left: 5px;
-}
-
-.tile {
-	padding: 30px;
-	margin-bottom: 5px;
-}
-
-.tile-title {
-	font-family: Segoe UI Bold;
-	font-size: 22px;
-	color: #edc951;
-}
-
-.infoBlock {
-	margin-top: 25px;
-	margin-bottom: 20px;
-}
-
-
-/*Container Color Schemes... Very Reusable :D*/
-
-.redBlock {
-	background-color: #cc333f;
-	color: white;
-	font-family: Segoe UI;
-}
-
-.blueBlock {
-	background-color: #00a0b0;
-	color: white;
-	font-family: Segoe UI;
-}
-
-.yellowBlock {
-	background-color: #edc951;
-	color: #cc333f;
-	font-family: Segoe UI;
-}
-
-.redButton {
-	background-color: #cc333f;
-	color: white;
-	font-family: Segoe UI Semibold;
-}
-
-.redButton:hover {
-	background-color: #e64552;
-}
-
-.blueButton {
-	background-color: #00a0b0;
-	color: white;
-	font-family: Segoe UI Semibold;
-}
-
-.blueButton:hover {
-	background-color: #12adbd;
-}
-
-.yellowButton {
-	background-color: #edc951;
-	color: #cc333f;
-	font-family: Segoe UI Semibold;
-}
-
-.yellowButton:hover {
-	background-color: #f8d560;
-	color: #cc333f;
-}
-#navDrop{
-	background-color: #00a0b0;
-}
-#navDrop li a{
-	color: white;
-}
-#navDrop li a:hover{
-	background-color: #cc333f ;
-}
-#navTabs a{
-	color: white;
-	font-family: Segoe UI Semibold;
-}
-#navTabs a:hover{
-	color: #edc951;
-	background-color: #cc333f;
-}
-#navTabs a:active{
-	color: #edc951;
-	background-color: #cc333f;
-}
-#collapseOne{
-	color:white;
-	margin-left: 50px;
-	max-height: 250px;
-	font-family: Segoe UI;
-	overflow-y:scroll; 
-}
-.table-hover tbody tr:hover{
-	
-	color: black;
-}
-.list-group-item{
-	background-color:#edc951; 
-	border-color: #edc951;
-
-}
-#collapseOne a{
-	color:  #cc333f;
-	font-family: Segoe UI;
-	font-weight: bolder;
-
-}
-#navUser{
-	color:white;
-}
-#welcomePanel{
-	height:180px;
-	overflow-y:scroll; 
-}
-#welcomePanelHead{
-	 position: fixed;
-           
-            width:100%;
-            padding:10px;
-}
-.panel-heading {
-	background-color: #00a0b0;
-	color: white;
-	font-family: Segoe UI;
->>>>>>> ddecdff68a2b49d554f21c681ae172b06890ce17
+#addButton a{
+	color:#cc333f;
 }
