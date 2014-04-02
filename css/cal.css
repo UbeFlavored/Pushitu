@@ -1,0 +1,40 @@
+#cal{
+	max-width: 95%;
+
+}
+
+.boxes{
+	height:50px;
+	text-align: right;
+	color: lightgray;
+	border-color: gray;
+	border-radius: 50px;
+	
+}
+
+.table > thead > tr > th{
+	padding: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 14.28%;
+
+}
+
+td{
+	height: 90px;
+}
+
+.btn{
+	padding-top: 100px;
+	display: table-cell;
+}
+
+#central{
+	margin-left: 275px;
+}
+
+#selectBoxCenter{
+	margin-left: 325px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

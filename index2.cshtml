@@ -1,0 +1,391 @@
+﻿
+
+<!doctype html>
+<html>
+    <head>   
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+
+        <link rel = "stylesheet" type="text/css" href="css/cal.css">
+        <!-- Loading Flat UI -->        
+        <link href="css/flat-ui.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/pushituico.ico">
+        <link rel = "stylesheet" type="text/css" href="style.css">
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+        <script src="js/bootstrap-switch.js"></script>
+        <script src="js/flatui-checkbox.js"></script>
+        <script src="js/flatui-radio.js"></script>
+        <script src="js/jquery.tagsinput.js"></script>
+        <script src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="frontjs/loginCheck.js"></script>
+        <script type="text/javascript" src="frontjs/registerCheck.js"></script>
+        <script type="text/javascript" src="js/cal.js"></script>
+        <script src="Scripted.js"></script>
+        <title>Pushitu! Organization</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body onLoad="setToday()">
+        <div class="container"><!--Add this for margin... parang sa front.html-->
+            <header>
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <nav class="navbar navbar-embossed" id="frontNav">
+                            <div class="navbar-header" >
+                                <a class="navbar-brand" href="#"><img src="images/icon.png" class="logoImg">Pushitu!</img></a>
+                            </div><!--Nav Header-->
+                        </nav><!--Navbar-->
+                    </div><!--Col 12-->
+                </div><!--Row Clearfix-->
+            </header><!--Header-->
+
+
+            <div class="col-md-3 column sidebar"> <!--Sidebar-->
+                <nav class=" navbar-embossed"  role="navigation">
+                    <ul class="nav nav-pills nav-stacked  " id="navTabs">
+                        <li><a href="#profile"  data-toggle="tab"><img src="images/sample1.png" class="profilePic"></img></a></li>
+                        <li><a href="#profile"  data-toggle="tab">UBE</a></li>
+                        <li class="active"><a href="#cal"data-toggle="tab">Org Calendar</a></li>
+                        <li><a href="#notifs"  data-toggle="tab">Org Notifications<span class="badge">2</span> </a></li>
+                        <li><a href="#invites"  data-toggle="tab">Org Events <span class="badge ">3</span></a></li>
+                        <li><a href="front.html">Logout</a></li>
+                    </ul>
+                </nav>
+            </div><!--Sidebar-->
+
+            <div class="col-md-9 column redBlock specialPlace ">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active"id="cal">
+                        <div class = "row clearfix" >
+                            <FORM NAME="calControl" onSubmit="return false;" style="color: black; " id="selectBoxCenter">
+                                <SELECT NAME="month" onChange="selectDate()" >
+                                    <OPTION>January</OPTION>
+                                    <OPTION>February</OPTION>
+                                    <OPTION>March</OPTION>
+                                    <OPTION>April</OPTION>
+                                    <OPTION>May</OPTION>
+                                    <OPTION>June</OPTION>
+                                    <OPTION>July</OPTION>    
+                                    <OPTION>August</OPTION>
+                                    <OPTION>September</OPTION>
+                                    <OPTION>October</OPTION>
+                                    <OPTION>November</OPTION>
+                                    <OPTION>December</OPTION>
+                                </SELECT> 
+                                <!-- <INPUT NAME="year" TYPE=TEXT SIZE=4 MAXLENGTH=4>-->
+                                <SELECT NAME="year" onChange="selectDate()" style="color: black;">
+                                    <OPTION>2013</OPTION>
+                                    <OPTION>2014</OPTION>
+                                    <OPTION>2015</OPTION>
+                                    <OPTION>2016</OPTION>
+                                    <OPTION>2017</OPTION>
+                                    <OPTION>2018</OPTION>
+                                    <OPTION>2019</OPTION>
+                                    <OPTION>2020</OPTION>
+                                    <OPTION>2021</OPTION>
+                                    <OPTION>2021</OPTION>
+                                    <OPTION>2022</OPTION>    
+                                    <OPTION>2023</OPTION>
+                                </SELECT> 
+                            </FORM>
+                        </div>
+                        <FORM NAME="calButtons" id="central" >
+                            <INPUT TYPE=BUTTON class="btn btn-embossed yellowButton" NAME="previousYear" VALUE=" <<  "  onClick="setPreviousYear()">
+                            <INPUT TYPE=BUTTON class="btn btn-embossed yellowButton" NAME="previousYear" VALUE="  <  "  onClick="setPreviousMonth()">
+                            <INPUT TYPE=BUTTON class="btn btn-embossed yellowButton" NAME="previousYear" VALUE="Today"  onClick="setToday()">
+                            <INPUT TYPE=BUTTON class="btn btn-embossed yellowButton" NAME="previousYear" VALUE="  >  "  onClick="setNextMonth()">
+                            <INPUT TYPE=BUTTON class="btn btn-embossed yellowButton" NAME="previousYear" VALUE="  >> "  onClick="setNextYear()">
+                        </FORM>
+                        <table class="table">
+                            <thead>
+                            <div class="btn-group btn-group-justified">
+                                <tr> 
+                                    <th class="btn redButton " role="button">Sunday</th>
+                                    <th class="btn redButton " role="button">Monday</th>
+                                    <th class="btn redButton" role="button">Tuesday</th>
+                                    <th class="btn redButton" role="button">Wednesday</th>
+                                    <th class="btn redButton" role="button">Thursday</th>
+                                    <th class="btn redButton" role="button">Friday</th>
+                                    <th class="btn redButton" role="button">Saturday</th>
+                                </tr>
+                            </div>
+                            </thead>
+                            <tbody id="dates">
+                            </tbody>
+                        </table>
+
+                    </div><!--Tab-Pane ni Cal-->
+                    <div class="tab-pane fade" id="notifs">
+                        <h1>Notifications </h1>
+                        <ul class="list-group">
+                            <li class="list-group-item">21 people Accepted your Invitation at <a href="#" data-toggle="modal" data-target="#modal1">Adventure Time: The Movie</a></li>
+                            <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modal3">Clean Up Drive</a> Information has been updated</li>
+                            <li class="list-group-item">Created a new event called <a href="#" data-toggle="modal" data-target="#modal2">Drawing Seminar</a></li>
+
+                        </ul>
+                    </div><!--Tab Pane ni notifs-->
+                    <div class="tab-pane fade" id="invites">
+                        <h1>Invitations </h1>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Event Name</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Place</th>
+                                    <th>Attendance</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#" data-toggle="modal" data-target="#modal1">Adventure Time: The Movie Screening</a></td>
+                                    <td>January 20, 2014</td>
+                                    <td>6:20pm - 10:00pm</td>
+                                    <td>A903</td>
+                                    <td>20/40</td>
+                                    <td><ul class="notifa">
+                                            <li><a href="#" >Edit</a></li>
+                                            <li ><a href="#">Delete</a></li>
+                                        </ul></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" data-toggle="modal" data-target="#modal2">Drawing Seminar</a></td>
+                                    <td>February 1, 2014</td>
+                                    <td>1:00pm - 6:00pm</td>
+                                    <td>A2003</td>
+                                    <td>10/40</td>
+                                    <td><ul class="notifa">
+                                            <li><a href="#" >Edit</a></li>
+                                            <li ><a href="#">Delete</a></li>
+                                        </ul></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" data-toggle="modal" data-target="#modal3">Clean Up Drive</a></td>
+                                    <td>February 21, 2014</td>
+                                    <td>3:30pm - 5:30pm</td>
+                                    <td>G304B</td>
+                                    <td>38/40</td>
+                                    <td><ul class="notifa">
+                                            <li><a href="#" >Edit</a></li>
+                                            <li ><a href="#">Delete</a></li>
+                                        </ul></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div><!--Tab Pane ni invites-->
+                    <div class="tab-pane fade" id="profile">
+                        <h1>Org Profile  </h1>
+
+                        <!--  <div class="col-md-4 column">
+                              <img src="images/samplebig.png"></img><br>
+  
+                          </div>-->
+                        <div class="col-md-12 column">
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <div class="panel  blueBlock  " >
+                                        <div class="panel-heading ">
+                                            <h1 class="panel-title profilePanelHead">Basic Information  <a href="#" class="pull-right">Edit</a> </h1>
+
+                                        </div>
+                                        <div class="panel-body  yellowBlock profilePanel " >
+                                            Org Name: Ube Flavored Organization<br>
+                                            Shorten Name: UBE<br>
+                                            College: College of Computer Science (CCS)<br>
+                                            Course: BS Computer Science - Software Technology<br>
+                                            Creation Date: 9/11/95<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="panel  blueBlock  " >
+                                        <div class="panel-heading ">
+                                            <h1 class="panel-title profilePanelHead">Events Created <a href="#" class="pull-right">Edit</a> </h1>
+                                        </div>
+                                        <div class="panel-body  yellowBlock profilePanel" >
+                                            Adventure Time<br>
+                                            Drawing Seminar<br>
+                                            Clean Up Drive<br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <div class="panel  blueBlock profilePanel " >
+                                        <div class="panel-heading ">
+                                            <h1 class="panel-title profilePanelHead">Members <a href="#" class="pull-right">Edit</a></h1>
+                                        </div>
+                                        <div class="panel-body  yellowBlock profilePanel " >
+                                            Skobeloff<br>
+                                            ArcFrey<br>
+                                            Shane East<br>
+                                            <a href="#">More...</a><br>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="panel blueBlock">
+                                        <div class="panel-heading">
+                                            <h1 class="panel-title profilePanelHead">Interests <a href="#" class="pull-right">Edit</a></h1>
+                                        </div>
+                                        <div class="panel-body  yellowBlock profilePanel " >
+                                            Music<br>
+                                            Art<br>
+                                            Games<br>
+                                            <a href="#">More...</a><br>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--Tab Pane ni profile-->
+                </div> <!--Tab Content--> 
+            </div><!--10 Columns-->
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header blueBlock">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Adventure Time: The Movie</h4>
+                        </div>
+                        <div class="modal-body whiteBlock coloredScroll2">
+                            <div class="col-md-5 column">
+                                <p>Private Event: Invite Only <br>
+                                    Event Type: Film Showing <br>
+                                    Category: Cartoons, Fun, Design <br>
+                                    Organizer: SampleOrg<br>
+                                    Time: 6:20 - 10:00 <br>
+                                    Date: January 20, 2014 <br>
+                                    Venue: A903 <br>
+                            </div>
+                            <div class="col-md-7 column">
+                                <p> Click on a Question to answer</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> Can I bring Foods?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"> <a href="#">Is it in HD?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"> <a href="#">is Dis Legit?!?!?!?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"> <a href="#">Can I bring my friends from other schools?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer whiteBlock">
+                            <button type="button" class="btn btn-default redButton" data-dismiss="modal">Delete</button>
+                            <button type="button" class="btn btn-primary blueButton">Edit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header blueBlock">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Drawing Seminar</h4>
+                        </div>
+                        <div class="modal-body whiteBlock coloredScroll2">
+                            <div class="col-md-5 column">
+                                <p>Private Event: Invite Only <br>
+                                    Event Type: Seminar/Talk <br>
+                                    Category: Design, Art <br>
+                                    Organizer: SampleOrg <br>
+                                    Time: 1:00 - 6:00 <br>
+                                    Date: February 1, 2014 <br>
+                                    Venue: A2003</p>
+                            </div>
+                            <div class="col-md-7 column">
+                                <p> Click on a Question to answer</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item" id="whiteListItem"> Can I bring Foods?
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"> What colors are available?
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"> Why is it in andrew?
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"> Who da speaker?
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer whiteBlock">
+                            <button type="button" class="btn btn-default redButton" data-dismiss="modal">Delete</button>
+                            <button type="button" class="btn btn-primary blueButton">Edit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header blueBlock">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Clean Up Drive</h4>
+                        </div>
+                        <div class="modal-body whiteBlock coloredScroll2">
+                            <div class="col-md-5 column">
+                                <p>Public Event; Open To All <br>
+                                    Event Type: Socio-Civic <br>
+                                    Category: Charity<br>
+                                    Organizer: SampleORg <br>
+                                    Time: 3:30 - 5:30 <br>
+                                    Date: February 21, 2014 <br>
+                                    Venue: G304B <br>
+
+                                </p>
+                            </div>
+                            <div class="col-md-7 column">
+                                <p> Click on a Question to answer</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> Can I bring Foods?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> Is it in HD?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> is Dis Legit?!?!?!?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> Can I bring my friends from other schools?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> Is this fun?</a>
+                                    </li>
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> Can I bring my own broom?</a>
+                                    </li>
+
+                                    <li class="list-group-item" id="whiteListItem"><a href="#"> incentive list?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer whiteBlock">
+                            <button type="button" class="btn btn-default redButton" data-dismiss="modal">Delete</button>
+                            <button type="button" class="btn btn-primary blueButton">Edit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <footer>
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <nav class="navbar navbar-embossed" id="frontNav">
+                            <div class="navbar-header" >
+                                <div class="navbar-brand" >Pushitu! All Rights Reserved... Created By UBE Apps</div>
+                            </div><!--Nav Header-->
+                        </nav><!--Navbar-->
+                    </div><!--Col 12-->
+                </div><!--Row Clearfix-->
+            </footer>
+
+        </div><!--Header Container-->
+    </body>

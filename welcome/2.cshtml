@@ -1,0 +1,118 @@
+@{
+    var db = Database.Open("SchedersDB");
+    var id = Request.Params["id"];
+    var i = 0;
+    var getQuery = "SELECT tableID FROM ForeignKeys WHERE userID = " + id + " AND type = 'college'";
+    var data = db.Query(getQuery);
+    List<int> list = new List<int>();
+    List<string> courses = new List<string>();
+    
+    foreach (var row in data)
+    {
+        list.Add(row.tableID);
+        getQuery = "SELECT Name FROM Courses WHERE collegeID = " + row.tableID;
+        var data2 = db.Query(getQuery);
+        foreach (var row2 in data2)
+        {   
+            courses.Add(row2.Name);
+        }
+    }
+
+    //data = db.Query(getQuery);
+
+
+
+    if (IsPost)
+    {
+        var j = 0;
+        foreach (var row in courses)
+        {
+            if (Request.Form[row] == "on")
+            {
+                var query = "SELECT ID FROM Courses WHERE Name = '" + row + "'";
+                var data2 = db.Query(query);
+                query = "INSERT INTO ForeignKeys (userID, type, tableID) " +
+     "VALUES (" + id + ", 'courses', " + data2.First().ID + ")";
+                db.Execute(query);
+            }
+            i++;
+        }
+        Response.Redirect("~/welcome/3?id=" + id);
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../images/pushituico.ico">
+	
+	<link rel = "stylesheet" type="text/css" href="../style.css">
+	  <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.js"></script>
+    <script src="../js/bootstrap-switch.js"></script>
+    <script src="../js/flatui-checkbox.js"></script>
+    <script src="../js/flatui-radio.js"></script>
+    <script src="../js/jquery.tagsinput.js"></script>
+    <script src="../js/jquery.placeholder.js"></script>
+    <!--wizz -->
+   
+    <!-- Include Twitter Bootstrap and jQuery: -->
+ 
+<!-- Include the plugin's CSS and JS: -->
+
+</head>
+<body class="blueBlock">
+  <div class="container">
+    
+  <div class="row clearfix">
+    <div class="col-md-3 column">
+    </div>
+    <div class="col-md-6 column welcomeMain">
+
+        <form role="form" id="RegisterForm" onsubmit="" method="POST">
+            <h1 class="welcomeCenter">Welcome To PUSHITU!</h1>
+            <img src="../images/icons/svg/book.svg" alt="Book" class="tile-image big-illustration imageCenter">
+
+            <div class="panel yellowBlock">
+                <div class="panel-heading">
+                    <h1 class="panel-title profilePanelHead">Course</h1>
+                    <h7>Course?</h7>
+                </div>
+                <div class="panel-body coloredScroll" id="welcomePanel">
+                    @foreach (var row in courses)
+                    {
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBox(@row)
+                                @row
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                    <span class="sr-only">50% Complete</span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-hg btn-embossed btn-block redButton pull-right" value="Update" style="width: auto">Next</button>
+            </form>
+</div>
+
+    </div>
+  </div>
+</body>
+

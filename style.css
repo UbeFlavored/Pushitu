@@ -1,0 +1,416 @@
+.navbar {
+    background-color: #00a0b0;	
+}
+#frontNav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#fixedNav{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: fixed;
+    min-width: 84.6%;
+    z-index: 1030;
+}
+@media (max-width: 1200px){
+    #fixedNav{
+        width: 90%;
+    }
+}
+@media(min-width: 1400px){
+    #fixedNav{
+        width: 1135px;
+    }
+}
+.navbar-brand{
+    color: white;
+    font-family: Segoe UI Bold;
+    font-size: 24px;
+}
+
+.navbar-brand:hover{
+    color: #edc951;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #edc951;
+    border-top-color: #edc951;
+}
+
+.navbar-toggle:hover:before, .navbar-toggle:focus:before{
+    color: white;
+}
+
+.navbar-toggle:before {
+    color: #edc951;
+}
+
+#sign {
+    font-size: 20px;
+    font-family: Segoe UI Bold;
+    color: #edc951;
+}
+
+#sign:hover {
+    background-color: #12adbd;
+}
+
+#drop {
+    padding: 30px;
+    min-width: 300px;
+    background-color: #00a0b0;
+}
+
+.legend {
+    color: #cc333f;
+    font-family: Segoe UI Bold;
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+h1 {
+    font-family: Segoe UI Bold;
+    font-size: 30px;
+    margin-left: 0px;
+}
+
+.tile {
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+.tile-title {
+    font-family: Segoe UI Bold;
+    font-size: 22px;
+    color: #edc951;
+}
+
+.infoBlock {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+/*Container Color Schemes... Very Reusable :D*/
+.whiteBlock {
+    background-color: white;
+    color: #cc333f;
+    font-family: Segoe UI Semibold;
+
+}
+
+.redBlock {
+    background-color: #cc333f;
+    color: white;
+    font-family: Segoe UI;
+}
+
+.blueBlock {
+    background-color: #00a0b0;
+    color: white;
+    font-family: Segoe UI;
+}
+
+.yellowBlock {
+    background-color: #edc951;
+    color: #cc333f;
+    font-family: Segoe UI;
+}
+
+.redButton {
+    background-color: #cc333f;
+    color: white;
+    font-family: Segoe UI Semibold;
+}
+
+.redButton:hover {
+    background-color: #e64552;
+}
+
+.blueButton {
+    background-color: #00a0b0;
+    color: white;
+    font-family: Segoe UI Semibold;
+}
+
+.blueButton:hover {
+    background-color: #12adbd;
+}
+
+.yellowButton {
+    background-color: #edc951;
+    color: #cc333f;
+    font-family: Segoe UI Semibold;
+}
+
+.yellowButton:hover {
+    background-color: #f8d560;
+    color: #cc333f;
+}
+
+.page {
+    color: #cc333f;
+    font-family: Segoe UI Semibold;
+    font-size: 20px;	
+    margin-left: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.pageMinor {
+    color: #00a0b0;
+    font-family: Segoe UI Bold;
+    font-size: 24px;	
+    margin-left: 20px;
+}
+#navDrop{
+    min-width: 250px;
+    background-color: #00a0b0;
+}
+#navDrop li a{
+    color: white;
+    font-family: Segoe UI Semibold;
+    font-size: 18px;
+    padding: 15px;
+}
+#navDrop li a:hover{
+    background-color: #12adbd;
+}
+#navTabs a{
+    color: white;
+    font-family: Segoe UI Semibold;
+}
+#navTabs a:hover{
+    background-color: #12adbd;
+}
+#navTabs a:active{
+    color: #edc951;
+    background-color: #edc951;
+}
+
+.whiteBlock .nav-tabs{
+    background-color: white;
+    color: #cc333f;
+    font-family: Segoe UI Semibold;
+
+}
+.whiteBlock .nav-tabs a{
+    background-color: white;
+    color: #cc333f;
+    font-family: Segoe UI Semibold;
+
+}
+.whiteBlock .nav-tabs a:hover{
+    background-color: #cc333f;
+    color: white;
+}
+#navTabs a:active{
+    background-color: #cc333f;
+    color: white;
+}
+
+.collapseContent{
+    background-color: #00a0b0;
+    color:white;
+    max-height: 250px;
+    overflow-y:scroll; 
+    overflow-x:0;
+    width: 1140px;
+    padding-left:50px;
+    padding-right: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.collapseContent a{
+    color:  #edc951;
+    font-family: Segoe UI Bold;
+}
+#collapseOne{
+    position: fixed;
+    background-color: #00a0b0;
+    font-family: Segoe UI;
+    margin-right: 105px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.table {
+    margin-top: 10px;
+}
+
+.table-hover tbody tr:hover{
+    color: black;
+}
+
+.list-group-item{
+    background-color:#cc333f;
+    /*border-color: #00a0b0;*/
+    color:white;
+}
+
+
+#yellowListItem{
+     background-color: #edc951;
+    color: #cc333f;
+    border-color: #cc333f;
+}
+
+#whiteListItem{
+    background-color: white;
+    color: #555;
+    font-family: Segoe UI Semibold;
+}
+#collapseOne a{
+    color:  #edc951;
+    font-family: Segoe UI Bold;
+
+}
+#navUser{
+    font-size: 18px;
+    font-family: Segoe UI Bold;
+    color: #edc951;
+}
+#welcomePanel{
+    height:180px;
+    overflow-y:scroll; 
+}
+#welcomePanelHead{
+    position: fixed;
+
+    width:100%;
+    padding:10px;
+}
+.panel-heading {
+    /*background-color: #00a0b0;*/
+    color: white;
+    font-family: Segoe UI;
+}
+.modal-body{
+    height: 400px;
+}
+.modal-dialog{
+    width: 75%;
+}
+
+.coloredScroll::-webkit-scrollbar {
+    width: 12px;
+}
+.coloredScroll2::-webkit-scrollbar {
+    width: 12px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #12adbd;
+}
+/* Track */
+.coloredScroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+
+}
+
+/* Handle */
+.coloredScroll::-webkit-scrollbar-thumb {
+    background-color: #edc951;
+}
+.coloredScroll2::-webkit-scrollbar-thumb {
+    background-color: #00a0b0;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #cc333f;
+}
+
+.tooltip-inner {
+    background-color: #cc333f;
+}
+#addButton{
+    color:#cc333f;
+    margin-left: 10px;
+}
+#addButton a{
+    color:#cc333f;
+}
+.dayBox{
+    width: 10%;
+}
+.modalBtn{
+    padding: 10px;
+    margin: 10px;
+
+}
+.collapseArrow{
+    margin-top: 5px;
+    margin-left: 0px;
+}
+
+@media (max-width: 1200px){
+    .collapseArrow{
+        display: none;
+    }
+}
+
+.sidebar{
+    background-color: #00a0b0;
+    color: white;
+    font-family: Segoe UI;
+    height: 700px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+.specialPlace{
+    height: 700px;
+
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.specialPlace a{
+    color:#edc951;
+}
+
+.content {
+    color: #555;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #00a0b0;
+}
+
+.profileMargin{
+    margin-top: 30px;
+}
+
+.profilePanel{
+    height:250px;
+}
+.profilePic{
+    width: 100%;
+}
+.panel-body a{
+    color: #cc333f;
+    font-weight: bold;
+}
+.profilePanelHead{
+    margin-left: -2px;
+}
+.welcomeMain{
+    margin-top: 1px;
+}
+.imageCenter{
+    margin-left: 220px;
+}
+.welcomeCenter{
+    margin-left: 110px;
+}
+.logoImg{
+    width:40px;
+}
+
+.notifa{
+    list-style-type: none;
+    margin-left: -50px;
+}
+
+.navbar-brand img{
+    margin-right: 10px;
+}
